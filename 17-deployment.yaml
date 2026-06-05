@@ -36,8 +36,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginx-headless
 spec:
+  clusterIP: None  # This makes the service headless
   selector:
     # labels are used as selectors
     project: roboshop
